@@ -1,0 +1,14 @@
+{
+  "name": "Neon",
+  "description": "Neon is a simple code editor built into the native OS toolbar.",
+  "version": "0.1.0",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "Luka Kerr",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^1.4.3"
+  }
+}

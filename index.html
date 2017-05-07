@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/codemirror.css">
+	<link rel="stylesheet" href="css/monokai.css">
+
+	<script src="js/editor.js"></script>
+	<script src="js/codemirror.js"></script>
+	<script src="js/mode/css.js"></script>
+	<script src="js/mode/xml.js"></script>
+	<script src="js/mode/javascript.js"></script>
+	<script src="js/mode/htmlmixed.js"></script>
+	<script src="js/mode/php.js"></script>
+	<script src="js/mode/python.js"></script>
+	<script src="js/mode/ruby.js"></script>
+</head>
+<body>
+	<div class="header-arrow"></div>
+	<div class="wrapper">
+
+	<nav id="nav">
+		<img src="img/open.png" id="open" title="Open">
+		<img src="img/save.png" id="save" title="Save">
+        <img src="img/quit.png" class="quit" title="Quit">
+        <img src="img/refresh.png" class="refresh" title="Clear Code">
+	</nav>
+
+	<div id="editor">
+		<p id="open-dialog">Open a file <span id="open-symbol">&#8984;O</span></p>
+	</div>
+
+	<div class="bottom">
+		<img src="img/file.png" id="file">
+		<p id="title"></p>
+		<p id="mode"></p>
+	</div>
+	</div>
+
+	<script src="js/base.js"></script>
+	
+</body>
+</html>
