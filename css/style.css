@@ -19,36 +19,37 @@ body {
 
 .header-arrow {
 	position: absolute;
-	top: 2px;
+	top: 3px;
 	left: 50%;
-	margin-left: -5px;
-	height: 10px;
-	width: 10px;
+	margin-left: -8px;
+	height: 16px;
+	width: 16px;
 	transform: rotate(45deg);
-	background-color: #404040;
+	background-color: rgb(41, 46, 49);
 	margin-bottom:5px;
 }
 
 .wrapper {
-	margin-top:5px;
+	margin-top:10px;
 }
 
 /* Top Nav */
 
 nav {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	padding:2px;
-	background-color:#404040;
+	background-color: rgb(41, 46, 49);
 	padding-left:10px;
 	cursor:default;
 	position:fixed;
-	width:100%;
-	z-index:3;
+	width:96.5%;
+	z-index:2;
 }
 
 nav img {
-	width:17px;
-	padding:2px 2px 0 2px;
-	cursor:pointer;
+	width:15px;
+	padding:3.5px 3px 0 3px;
 }
 
 nav img:hover {
@@ -57,10 +58,11 @@ nav img:hover {
 
 .refresh, .quit {
 	float:right;
+	
 }
 
 .quit {
-	margin-right:15px;
+	margin-right:5px;
 }
 
 /* Editor Section */
@@ -69,11 +71,14 @@ nav img:hover {
 	width:100%;
 	height:100%;
 	position:fixed;
-	background-color:#181818;
+	background-color:rgb(46, 51, 54);
 	z-index:1;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	cursor:text;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px !important;
+	border: none;
 }
 
 #editor #open-dialog {
@@ -103,7 +108,7 @@ nav img:hover {
 	background-color:gray;
 	position:fixed;
 	bottom:0;
-	background-color:#444;
+	background-color:rgb(41, 46, 49);
 	z-index:3;
 }
 

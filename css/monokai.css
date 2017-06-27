@@ -1,5 +1,5 @@
 .cm-s-monokai {
-	background: #181818;
+	background: rgb(46, 51, 54);
 	color: #ddd;
 	width:100%;
 	margin-top:5px;
@@ -13,8 +13,9 @@
 }
 
 .cm-s-monokai .CodeMirror-gutter {
-	background: #181818;
+	background: rgb(41, 46, 49);
 	border-right: 0px;
+	padding-right: 5px;
 	z-index: 2;
 }
 

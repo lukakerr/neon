@@ -7,6 +7,7 @@
 	height:88%;
 	width:98%;
 	word-wrap: break-word;
+	border-radius: 5px;
 }
 
 .CodeMirror-scroll {
