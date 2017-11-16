@@ -1,6 +1,6 @@
 {
   "name": "Neon",
-  "description": "Neon is a simple code editor built into the native OS toolbar.",
+  "description": "Neon is a simple code editor built into the MacOS menubar.",
   "version": "0.1.0",
   "main": "main.js",
   "license": "MIT",
@@ -9,6 +9,6 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^1.6.10"
+    "electron": "^1.7.9"
   }
 }

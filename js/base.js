@@ -1,36 +1,20 @@
+const shell = require('electron')
+
 var map = {};
-onkeydown = onkeyup = function(e){
+
+onkeydown = onkeyup = function(e) {
 	map[e.keyCode] = e.type == 'keydown';
-	if(map[91] && map[83]){
-		document.getElementById("nav").classList.add('flash');
-		window.setTimeout(function() {
-			document.getElementById("nav").classList.remove('flash');
-		}, 300)
-		map = {};
-	}
-}
-
-var map2 = {};
-onkeydown = onkeyup = function(e){
-    map2[e.keyCode] = e.type == 'keydown';
-    if(map2[91] && map2[82]){
-        location.reload();
-        map2 = {};
-    }
-}
-
-var map3 = {};
-onkeydown = onkeyup = function(e){
-  map3[e.keyCode] = e.type == 'keydown';
-  if(map3[91] && map3[79]){
+	if ((map[91] || map[93]) && map[82]) {
+    location.reload();
+    map = {};
+  } else if ((map[91] || map[93]) && map[79]) {
     dialog.showOpenDialog({properties: ['openFile']}, function(filename) { 
-      onChosenFileToOpen(filename.toString()); });
-    map3 = {};
+      onChosenFileToOpen(filename.toString()); 
+    });
     document.getElementById('open-dialog').innerHTML = "";
+    map = {};
   }
 }
-
-const {shell} = require('electron')
 
 document.addEventListener('click', (event) => {
   if (event.target.href) {

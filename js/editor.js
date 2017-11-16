@@ -1,12 +1,10 @@
-var openButton, saveButton;
-var editor;
-var menu;
-var fileEntry;
-var hasWriteAccess;
-
 const {remote, clipboard} = require('electron');
 const {Menu, MenuItem, dialog } = remote;
 const fs = require("fs");
+
+var openButton, saveButton;
+var editor, menu;
+var fileEntry, hasWriteAccess;
 
 function handleDocumentChange(title) {
 	var mode = "";
@@ -36,6 +34,30 @@ function handleDocumentChange(title) {
 		} else if (title.match(/.js$/)) {
 			mode = "javascript";
 			modeName = "JavaScript";
+		} else if (title.match(/.coffee$/)) {
+			mode = "coffeescript";
+			modeName = "CoffeeScript";
+		} else if (title.match(/.sh$/)) {
+			mode = "shell";
+			modeName = "Shell Script";
+		} else if (title.match(/.yaml$/)) {
+			mode = "yaml";
+			modeName = "Yaml";
+		} else if (title.match(/.hs$/)) {
+			mode = "haskell";
+			modeName = "Haskell";
+		} else if (title.match(/.rs$/)) {
+			mode = "rust";
+			modeName = "Rust";
+		} else if (title.match(/.sass$/)) {
+			mode = "sass";
+			modeName = "Sass";
+		} else if (title.match(/.go$/)) {
+			mode = "go";
+			modeName = "Go";
+		} else if (title.match(/.clj$/)) {
+			mode = "clojure";
+			modeName = "Clojure";
 		}
 	} else {
 		document.getElementById("title").innerHTML = "[no file selected]";
@@ -57,10 +79,6 @@ function setFile(theFileEntry, isWritable) {
 
 function readFileIntoEditor(theFileEntry) {
 	fs.readFile(theFileEntry.toString(), function (err, data) {
-		if (err) {
-			console.log("Read failed: " + err);
-		}
-
 		handleDocumentChange(theFileEntry);
 		editor.setValue(String(data));
 	});
@@ -70,18 +88,15 @@ function writeEditorToFile(theFileEntry) {
 	var str = editor.getValue();
 	fs.writeFile(theFileEntry, editor.getValue(), function (err) {
 		if (err) {
-			console.log("Write failed: " + err);
 			return;
 		}
 
 		handleDocumentChange(theFileEntry);
-		console.log("Write completed.");
 	});
 }
 
 var onChosenFileToOpen = function(theFileEntry) {
-	console.log(theFileEntry);
-	setFile(theFileEntry, false);
+	setFile(theFileEntry, true);
 	readFileIntoEditor(theFileEntry);
 };
 
@@ -92,16 +107,19 @@ var onChosenFileToSave = function(theFileEntry) {
 
 function handleOpenButton() {
 	dialog.showOpenDialog({properties: ['openFile']}, function(filename) { 
-		onChosenFileToOpen(filename.toString()); });
+		onChosenFileToOpen(filename.toString()); 
+	});
 	document.getElementById('open-dialog').innerHTML = "";
 }
 
 function handleSaveButton() {
 	if (fileEntry && hasWriteAccess) {
 		writeEditorToFile(fileEntry);
-	} else {
+	} else if (!fileEntry) {
 		dialog.showSaveDialog(function(filename) {
-			onChosenFileToSave(filename.toString(), true);
+			if (filename) {
+				onChosenFileToSave(filename.toString(), true);
+			}
 		});
 	}
 }
@@ -147,15 +165,15 @@ onload = function() {
 	editor = CodeMirror(
 		document.getElementById("editor"),
 		{
-			mode: {name: "javascript", json: true },
+			mode: {
+				name: "javascript", json: true 
+			},
 			lineNumbers: true,
-			theme: "monokai",
+			theme: "material",
 			extraKeys: {
 				"Cmd-S": function(instance) { handleSaveButton() },
-				"Ctrl-S": function(instance) { handleSaveButton() },
 			}
 		});
 
 	newFile();
-	onresize();
 };

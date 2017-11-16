@@ -22,14 +22,14 @@
 	left: 0;
 	top: 0;
 	z-index: 10;
-	background-color: #f7f7f7;
-	border-right: 1px solid #eee;
+	background-color: #F7F7F7;
+	border-right: 1px solid #EEE;
 	min-width: 1.5em;
 	height: 100%;
 }
 
 .CodeMirror-gutter-text {
-	color: #aaa;
+	color: #AAA;
 	text-align: right;
 	padding: .4em .2em .4em .4em;
 	white-space: pre !important;
@@ -93,7 +93,7 @@
 }
 
 .CodeMirror-searching {
-	background: #ffa;
+	background: #FFA;
 	background: rgba(255, 255, 0, .4);
 }
 
@@ -112,7 +112,7 @@
 }
 
 .cm-s-default span.cm-def {
-	color: #00f;
+	color: #00F;
 }
 
 .cm-s-default span.cm-variable {
@@ -120,7 +120,7 @@
 }
 
 .cm-s-default span.cm-variable-2 {
-	color: #05a;
+	color: #05A;
 }
 
 .cm-s-default span.cm-variable-3 {
@@ -136,15 +136,15 @@
 }
 
 .cm-s-default span.cm-comment {
-	color: #a50;
+	color: #A50;
 }
 
 .cm-s-default span.cm-string {
-	color: #a11;
+	color: #A11;
 }
 
 .cm-s-default span.cm-string-2 {
-	color: #f50;
+	color: #F50;
 }
 
 .cm-s-default span.cm-meta {
@@ -152,7 +152,7 @@
 }
 
 .cm-s-default span.cm-error {
-	color: #f00;
+	color: #F00;
 }
 
 .cm-s-default span.cm-qualifier {
@@ -160,11 +160,11 @@
 }
 
 .cm-s-default span.cm-builtin {
-	color: #30a;
+	color: #30A;
 }
 
 .cm-s-default span.cm-bracket {
-	color: #cc7;
+	color: #CC7;
 }
 
 .cm-s-default span.cm-tag {
@@ -172,7 +172,7 @@
 }
 
 .cm-s-default span.cm-attribute {
-	color: #00c;
+	color: #00C;
 }
 
 .cm-s-default span.cm-header {
@@ -188,7 +188,7 @@
 }
 
 .cm-s-default span.cm-link {
-	color: #00c;
+	color: #00C;
 }
 
 span.cm-header, span.cm-strong {
@@ -209,7 +209,7 @@ span.cm-link {
 }
 
 div.CodeMirror span.CodeMirror-matchingbracket {
-	color: #0f0;
+	color: #0F0;
 }
 
 div.CodeMirror span.CodeMirror-nonmatchingbracket {

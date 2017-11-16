@@ -1,20 +1,20 @@
 body {
-	margin:0;
-	background:transparent;
-	border:none;
+	margin: 0;
+	background: transparent;
+	border: none;
 }
 
 ::-webkit-scrollbar { 
-    display: none; 
+  display: none; 
 }
 
 @keyframes fadeout {
-    from {
-        opacity:0.5;
-    }
-    to {
-        opacity:0;
-    }
+  from {
+    opacity:0.5;
+  }
+  to {
+    opacity:0;
+  }
 }
 
 .header-arrow {
@@ -26,11 +26,11 @@ body {
 	width: 16px;
 	transform: rotate(45deg);
 	background-color: rgb(41, 46, 49);
-	margin-bottom:5px;
+	margin-bottom: 5px;
 }
 
 .wrapper {
-	margin-top:10px;
+	margin-top: 10px;
 }
 
 /* Top Nav */
@@ -38,97 +38,97 @@ body {
 nav {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	padding:2px;
+	padding: 2px;
 	background-color: rgb(41, 46, 49);
-	padding-left:10px;
-	cursor:default;
-	position:fixed;
-	width:96.5%;
-	z-index:2;
+	padding-left: 10px;
+	cursor: default;
+	position: fixed;
+	width: 96.5%;
+	z-index: 2;
 }
 
 nav img {
-	width:15px;
-	padding:3.5px 3px 0 3px;
+	width: 15px;
+	padding: 3.5px 3px 0 3px;
 }
 
 nav img:hover {
-	opacity:0.5;
+	opacity: 0.5;
 }
 
 .refresh, .quit {
-	float:right;
+	float: right;
 	
 }
 
 .quit {
-	margin-right:5px;
+	margin-right: 5px;
 }
 
 /* Editor Section */
 
 #editor {
-	width:100%;
-	height:100%;
-	position:fixed;
-	background-color:rgb(46, 51, 54);
-	z-index:1;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgb(46, 51, 54);
+	z-index: 1;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	cursor:text;
+	cursor: text;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px !important;
 	border: none;
 }
 
 #editor #open-dialog {
-	color:#aaa;
-	opacity:0.5;
-	font-family:sans-serif;
-	font-size:30px;
+	color: #AAA;
+	opacity: 0.5;
+	font-family: sans-serif;
+	font-size: 30px;
 	position: absolute;
-	left:0; 
-	right:0;
-	top:0; 
-	bottom:0;
-	margin:55% 15% 0 20%;
+	left: 0; 
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	margin: 55% 15% 0 20%;
 	animation: fadeout 2s;
 	animation-delay: 3s;
 	animation-fill-mode: forwards;
 	-webkit-user-select: none;
-	z-index:10;
+	z-index: 10;
 }
 
 /* Bottom Bar */
 
 .bottom {
-	height:20px;
-	width:100%;
-	display:block;
-	background-color:gray;
-	position:fixed;
-	bottom:0;
-	background-color:rgb(41, 46, 49);
-	z-index:3;
+	height: 20px;
+	width: 100%;
+	display: block;
+	background-color: gray;
+	position: fixed;
+	bottom: 0;
+	background-color: rgb(41, 46, 49);
+	z-index: 3;
 }
 
 .bottom #title, .bottom #mode {
-	margin-left:30px;
-	font-size:11px;
-	color:#aaa;
-	font-family:sans-serif;
-	top:-8px;
-	position:absolute;
+	margin-left: 30px;
+	font-size: 11px;
+	color: #AAA;
+	font-family: sans-serif;
+	top: -8px;
+	position: absolute;
 }
 
 .bottom #mode {
-	right:10px;
+	right: 10px;
 }
 
 .bottom img {
-	width:13px;
-	top:0;
-	margin:3px 0 0 8px;
+	width: 13px;
+	top: 0;
+	margin: 3px 0 0 8px;
 }
 
 /* Flash */
@@ -138,6 +138,10 @@ nav img:hover {
 }
 
 @keyframes flash {
-	0%     {background-color:#404040;}
-    100%  {background-color:#606060;}
+	0% {
+		background-color: #404040;
+	}
+  100%  {
+  	background-color: #606060;
+  }
 }

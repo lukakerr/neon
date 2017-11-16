@@ -1,6 +1,9 @@
 # Neon
-Neon is a simple code editor for OS X, that runs from the system tray (toolbar).
+
+Neon is a simple code editor for MacOS that runs from the menubar.
+
+It supports syntax highlighting for: clojure, coffeescript, css, go, haskell, html, javascript, php, python, ruby, rust, sass, shell, xml and yaml.
 
 It is built using Electron.
 
-<img src="http://i.imgur.com/Su4oxY2.png" alt="pickur" width="300">
+<img src="http://i.imgur.com/Su4oxY2.png" alt="neon" width="300">
