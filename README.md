@@ -6,4 +6,4 @@ It supports syntax highlighting for: clojure, coffeescript, css, go, haskell, ht
 
 It is built using Electron.
 
-<img src="http://i.imgur.com/Su4oxY2.png" alt="neon" width="300">
+<img src="https://i.imgur.com/Oy4yp0n.png" alt="neon" width="300">
